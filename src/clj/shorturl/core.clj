@@ -5,9 +5,15 @@
             [muuntaja.core :as m]
             [reitit.ring.middleware.muuntaja :as muuntaja]
             [shorturl.db :as db]
-            [shorturl.slug :refer [generate-slug]]))
+            [shorturl.slug :refer [generate-slug]]
+            [clojure.java.io :as io]))
 
 ;; https://github.com/alndvz/vid4
+
+(defn index []
+  (slurp (io/resource "public/index.html")))
+
+(index)
 
 (defn redirect [req]
   (let [slug (get-in req [:path-params :slug])
@@ -20,7 +26,7 @@
   (let [url (get-in req [:body-params :url] "no :body-params found")
         slug (generate-slug)]
     (db/insert-redirect! slug url)
-    (r/response (str "created slug " slug " with url " (get-in req [:body-params])))))
+    (r/response {:slug slug})))
 
 (defn print-post [req]
   (clojure.pprint/pprint (get-in req [:body-params :url] "no :body-params found"))
@@ -35,7 +41,8 @@
         [":slug/" redirect]
         ["api/"
          ["redirect/" {:post create-redirect}]]
-        ["" {:handler (fn [req] {:body "Create redirect screen" :status 200})}]]
+        ["assets/*" (ring/create-resource-handler {:root "public/assets"})]
+        ["" {:handler (fn [req] {:body (index) :status 200})}]]
        {:data {:muuntaja m/instance
                :middleware [muuntaja/format-middleware]}})))
 
@@ -44,10 +51,6 @@
         :uri "/api/redirect/"
         :body-params {:url "https://metosin.fi"}})
   (db/get-url "EAYRQJOCPN"))
-
-
-
-
 
 
 

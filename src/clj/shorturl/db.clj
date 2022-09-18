@@ -16,6 +16,18 @@
 ;DATABASE=shorturl
 
 
+;; (def db
+;;   {:classname   "org.sqlite.JDBC"
+;;    :subprotocol "sqlite"
+;;    :subname     "db/database.db"})
+
+;; create table
+;; (j/db-do-commands db "CREATE TABLE redirects
+;;                     (slug varchar(12) PRIMARY KEY NOT NULL,
+;;                      url varchar(1000) NOT NULL)")
+
+
+
 (def mysql-db
   {:host (env :HOST)
    :dbtype (env :DBTYPE)
