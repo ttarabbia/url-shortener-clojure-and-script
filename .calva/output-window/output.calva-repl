@@ -5,10 +5,6 @@
 ; Happy coding! ♥️
 
 ; Jacking in...
-; Starting Jack-in Terminal: npx shadow-cljs -d cider/cider-nrepl:0.28.5 watch
-; Connecting ...
-; No nrepl port file found.
-; Jacking in...
 ; Starting Jack-in Terminal: npx shadow-cljs -d cider/cider-nrepl:0.28.5 watch :app
 ; Hooking up nREPL sessions...
 ; Connected session: clj
@@ -29,138 +25,52 @@ clj꞉shadow.user꞉>  ; Use `alt+enter` to evaluate
 ;    (There is a button in the status bar for this)
 ; Jack-in done.
 cljs꞉cljs.user꞉>  ; Use `alt+enter` to evaluate
-nil
-cljs꞉app.core꞉> 
-nil
-cljs꞉app.core꞉> 
-#object[app$core$app_render]
-cljs꞉app.core꞉> 
-nil
-cljs꞉app.core꞉> 
-; nREPL Connection was closed
-; Jacking in...
-; Starting Jack-in Terminal: npx shadow-cljs -d cider/cider-nrepl:0.28.5 watch :app
-; Hooking up nREPL sessions...
-; Connected session: clj
-; TIPS:
-;   - You can edit the contents here. Use it as a REPL if you like.
-;   - `alt+enter` evaluates the current top level form.
-;   - `ctrl+enter` evaluates the current form.
-;   - `alt+up` and `alt+down` traverse up and down the REPL command history
-;      when the cursor is after the last contents at the prompt
-;   - Clojure lines in stack traces are peekable and clickable.
-clj꞉shadow.user꞉> 
-; Creating cljs repl session...
-; Connecting cljs repl: shadow-cljs...
-;   The Calva Connection Log might have more connection progress information.
-; Connected session: cljs, repl: :app
-; TIPS: You can choose which REPL to use (clj or cljs):
-;    *Calva: Toggle REPL connection*
-;    (There is a button in the status bar for this)
-; Jack-in done.
-cljs꞉cljs.user꞉> 
-; Evaluating file: core.clj
+; Evaluating file: db.clj
 ; WARNING: for already refers to: #'clojure.core/for in namespace: shorturl.db, being replaced by: #'honey.sql.helpers/for
 ; WARNING: group-by already refers to: #'clojure.core/group-by in namespace: shorturl.db, being replaced by: #'honey.sql.helpers/group-by
 ; WARNING: update already refers to: #'clojure.core/update in namespace: shorturl.db, being replaced by: #'honey.sql.helpers/update
 ; WARNING: set already refers to: #'clojure.core/set in namespace: shorturl.db, being replaced by: #'honey.sql.helpers/set
+; Execution error (SQLException) at java.sql.DriverManager/getConnection (DriverManager.java:702).
+; No suitable driver found for jdbc:sqlite:db/database.db
+; Evaluation of file db.clj failed: class clojure.lang.Compiler$CompilerException
+clj꞉shorturl.db꞉> 
+clojure.lang.Compiler/load (Compiler.java:7665)
+shorturl.db/eval32763 (NO_SOURCE_FILE:1)
+clojure.lang.Compiler/eval (Compiler.java:7194)
+clojure.core/eval (core.clj:3215)
+clojure.core/eval (core.clj:3211)
+nrepl.middleware.interruptible-eval/evaluate (interruptible_eval.clj:87)
+clojure.core/apply (core.clj:667)
+clojure.core/with-bindings* (core.clj:1990)
+nrepl.middleware.interruptible-eval/evaluate (interruptible_eval.clj:87)
+clojure.main/repl (main.clj:437)
+clojure.main/repl (main.clj:458)
+clojure.main/repl (main.clj:368)
+nrepl.middleware.interruptible-eval/evaluate (interruptible_eval.clj:84)
+nrepl.middleware.interruptible-eval/evaluate (interruptible_eval.clj:56)
+nrepl.middleware.interruptible-eval/interruptible-eval (interruptible_eval.clj:152)
+nrepl.middleware.session/session-exec (session.clj:218)
+nrepl.middleware.session/session-exec (session.clj:217)
+java.lang.Thread/run (Thread.java:829)
+clj꞉shorturl.db꞉> 
 nil
-clj꞉shorturl.core꞉> 
-#'shorturl.core/index
-clj꞉shorturl.core꞉> 
-; Execution error (IllegalArgumentException) at shorturl.core/index (REPL:14).
-; Cannot open <nil> as a Reader.
-clj꞉shorturl.core꞉> 
-clj꞉shorturl.core꞉> 
-; Evaluating file: core.clj
-; Execution error (IllegalArgumentException) at shorturl.core/index (core.clj:14).
-; Cannot open <nil> as a Reader.
-; Evaluation of file core.clj failed: class clojure.lang.Compiler$CompilerException
-clj꞉shorturl.core꞉> 
-; Evaluating file: core.clj
-; Execution error (IllegalArgumentException) at shorturl.core/index (core.clj:14).
-; Cannot open <nil> as a Reader.
-; Evaluation of file core.clj failed: class clojure.lang.Compiler$CompilerException
-clj꞉shorturl.core꞉> 
-#'shorturl.core/index
-clj꞉shorturl.core꞉> 
-; Execution error (IllegalArgumentException) at shorturl.core/index (REPL:14).
-; Cannot open <nil> as a Reader.
-clj꞉shorturl.core꞉> 
-#'shorturl.core/index
-clj꞉shorturl.core꞉> 
-; Execution error (IllegalArgumentException) at shorturl.core/index (REPL:14).
-; Cannot open <nil> as a Reader.
-clj꞉shorturl.core꞉> 
-; nREPL Connection was closed
-; Jacking in...
-; Starting Jack-in Terminal: npx shadow-cljs -d cider/cider-nrepl:0.28.5 watch :app
-; Hooking up nREPL sessions...
-; Connected session: clj
-; TIPS:
-;   - You can edit the contents here. Use it as a REPL if you like.
-;   - `alt+enter` evaluates the current top level form.
-;   - `ctrl+enter` evaluates the current form.
-;   - `alt+up` and `alt+down` traverse up and down the REPL command history
-;      when the cursor is after the last contents at the prompt
-;   - Clojure lines in stack traces are peekable and clickable.
-clj꞉shadow.user꞉> 
-; Creating cljs repl session...
-; Connecting cljs repl: shadow-cljs...
-;   The Calva Connection Log might have more connection progress information.
-; Connected session: cljs, repl: :app
-; TIPS: You can choose which REPL to use (clj or cljs):
-;    *Calva: Toggle REPL connection*
-;    (There is a button in the status bar for this)
-; Jack-in done.
-cljs꞉cljs.user꞉> 
-; Evaluating file: core.clj
 ; WARNING: for already refers to: #'clojure.core/for in namespace: shorturl.db, being replaced by: #'honey.sql.helpers/for
 ; WARNING: group-by already refers to: #'clojure.core/group-by in namespace: shorturl.db, being replaced by: #'honey.sql.helpers/group-by
 ; WARNING: update already refers to: #'clojure.core/update in namespace: shorturl.db, being replaced by: #'honey.sql.helpers/update
 ; WARNING: set already refers to: #'clojure.core/set in namespace: shorturl.db, being replaced by: #'honey.sql.helpers/set
-; Execution error (IllegalArgumentException) at shorturl.core/index (core.clj:14).
-; Cannot open <nil> as a Reader.
-; Evaluation of file core.clj failed: class clojure.lang.Compiler$CompilerException
-clj꞉shorturl.core꞉> 
-#'shorturl.core/index
-clj꞉shorturl.core꞉> 
-; Execution error (IllegalArgumentException) at shorturl.core/index (REPL:14).
-; Cannot open <nil> as a Reader.
-clj꞉shorturl.core꞉> 
-#'shorturl.core/index
-clj꞉shorturl.core꞉> 
-; Execution error (FileNotFoundException) at java.io.FileInputStream/open0 (FileInputStream.java:-2).
-; /public/index.html (No such file or directory)
-clj꞉shorturl.core꞉> 
-#'shorturl.core/index
-clj꞉shorturl.core꞉> 
-"<!doctype html>\n<html lang=\"en\">\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=\"viewport\"\n          content=\"width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0\">\n    <meta http-equiv=\"X-UA-Compatible\" content=\"ie=edge\">\n    <title>Shorturl app</title>\n    <script src=\"assets/js/main.js\" defer></script>\n</head>\n<body>\n    <div id=\"app\"></div>\n</body>\n</html>"
-clj꞉shorturl.core꞉> 
-; Syntax error compiling at (src/clj/shorturl/core.clj:39:5).
-; Unable to resolve symbol: redirect in this context
-clj꞉shorturl.core꞉> 
-; Evaluating file: core.clj
-nil
-clj꞉shorturl.core꞉> 
-#'shorturl.core/app
-clj꞉shorturl.core꞉> 
-#'shorturl.core/start
-clj꞉shorturl.core꞉> 
-#'shorturl.core/server
-clj꞉shorturl.core꞉> 
-#'shorturl.core/index
-clj꞉shorturl.core꞉> 
-#'shorturl.core/start
-clj꞉shorturl.core꞉> 
-nil
-clj꞉shorturl.core꞉> 
-#'shorturl.core/server
-clj꞉shorturl.core꞉> 
-#'shorturl.core/app
-clj꞉shorturl.core꞉> 
-#'shorturl.core/app
-clj꞉shorturl.core꞉> 
+clj꞉shorturl.db꞉> 
+#'shorturl.db/mysql-db
+clj꞉shorturl.db꞉> 
+#'shorturl.db/query-ps
+clj꞉shorturl.db꞉> 
+; Execution error (SQLException) at java.sql.DriverManager/getConnection (DriverManager.java:702).
+; No suitable driver found for jdbc:sqlite:shorturl
+clj꞉shorturl.db꞉> 
+#'shorturl.db/mysql-db
+clj꞉shorturl.db꞉> 
+; Execution error (SQLException) at java.sql.DriverManager/getConnection (DriverManager.java:702).
+; No suitable driver found for jdbc:sqlite:shorturl
+clj꞉shorturl.db꞉> 
 ; nREPL Connection was closed
 ; Jacking in...
 ; Starting Jack-in Terminal: npx shadow-cljs -d cider/cider-nrepl:0.28.5 watch :app
@@ -183,280 +93,90 @@ clj꞉shadow.user꞉> 
 ;    (There is a button in the status bar for this)
 ; Jack-in done.
 cljs꞉cljs.user꞉> 
-; nREPL Connection was closed
-; Jacking in...
-; Starting Jack-in Terminal: npx shadow-cljs -d cider/cider-nrepl:0.28.5 watch :app
-; Hooking up nREPL sessions...
-; Connected session: clj
-; TIPS:
-;   - You can edit the contents here. Use it as a REPL if you like.
-;   - `alt+enter` evaluates the current top level form.
-;   - `ctrl+enter` evaluates the current form.
-;   - `alt+up` and `alt+down` traverse up and down the REPL command history
-;      when the cursor is after the last contents at the prompt
-;   - Clojure lines in stack traces are peekable and clickable.
-clj꞉shadow.user꞉> 
-; Creating cljs repl session...
-; Connecting cljs repl: shadow-cljs...
-;   The Calva Connection Log might have more connection progress information.
-; Connected session: cljs, repl: :app
-; TIPS: You can choose which REPL to use (clj or cljs):
-;    *Calva: Toggle REPL connection*
-;    (There is a button in the status bar for this)
-; Jack-in done.
-cljs꞉cljs.user꞉> 
-; Evaluating file: core.cljs
-; No available JS runtime.
-; See https://shadow-cljs.github.io/docs/UsersGuide.html#repl-troubleshooting
-nil
-clj꞉cljs.user꞉> 
-nil
-; No available JS runtime.
-; See https://shadow-cljs.github.io/docs/UsersGuide.html#repl-troubleshooting
-clj꞉cljs.user꞉> 
-; Evaluating file: core.clj
+; Evaluating file: db.clj
 ; WARNING: for already refers to: #'clojure.core/for in namespace: shorturl.db, being replaced by: #'honey.sql.helpers/for
 ; WARNING: group-by already refers to: #'clojure.core/group-by in namespace: shorturl.db, being replaced by: #'honey.sql.helpers/group-by
 ; WARNING: update already refers to: #'clojure.core/update in namespace: shorturl.db, being replaced by: #'honey.sql.helpers/update
 ; WARNING: set already refers to: #'clojure.core/set in namespace: shorturl.db, being replaced by: #'honey.sql.helpers/set
+; Execution error (SQLException) at java.sql.DriverManager/getConnection (DriverManager.java:702).
+; No suitable driver found for jdbc:sqlite:db/database.db
+; Evaluation of file db.clj failed: class clojure.lang.Compiler$CompilerException
+clj꞉shorturl.db꞉> 
 nil
-clj꞉shorturl.core꞉> 
-#'shorturl.core/server
-clj꞉shorturl.core꞉> 
-nil
-; ------ WARNING - :undeclared-var -----------------------------------------------
-;  Resource: <eval>:1:3
- Use of undeclared Var app.core/state
---------------------------------------------------------------------------------
-
-; ------ WARNING - :undeclared-var -----------------------------------------------
-;  Resource: <eval>:1:9
- Use of undeclared Var app.core/set-state
---------------------------------------------------------------------------------
-
-; ------ WARNING - :undeclared-var -----------------------------------------------
-;  Resource: <eval>:2:9
- Use of undeclared Var app.core/fetch-slug
---------------------------------------------------------------------------------
-
-; ------ WARNING - :undeclared-ns ------------------------------------------------
-;  Resource: <eval>:3:23
- No such namespace: p, could not locate p.cljs, p.cljc, or JavaScript source providing "p"
---------------------------------------------------------------------------------
-
-; ------ WARNING - :undeclared-var -----------------------------------------------
-;  Resource: <eval>:3:23
- Use of undeclared Var p/let
---------------------------------------------------------------------------------
-
-; ------ WARNING - :undeclared-var -----------------------------------------------
-;  Resource: <eval>:3:30
- Use of undeclared Var app.core/_response
---------------------------------------------------------------------------------
-
-; ------ WARNING - :undeclared-var -----------------------------------------------
-;  Resource: <eval>:4:30
- Use of undeclared Var app.core/response
---------------------------------------------------------------------------------
-
-; ------ WARNING - :undeclared-var -----------------------------------------------
-;  Resource: <eval>:4:46
- Use of undeclared Var app.core/_response
---------------------------------------------------------------------------------
-
-; ------ WARNING - :undeclared-var -----------------------------------------------
-;  Resource: <eval>:5:38
- Use of undeclared Var app.core/response
---------------------------------------------------------------------------------
-
-clj꞉app.core꞉> 
-nil
-; ------ WARNING - :undeclared-var -----------------------------------------------
-;  Resource: <eval>:1:3
- Use of undeclared Var app.core/state
---------------------------------------------------------------------------------
-
-; ------ WARNING - :undeclared-var -----------------------------------------------
-;  Resource: <eval>:1:9
- Use of undeclared Var app.core/set-state
---------------------------------------------------------------------------------
-
-; ------ WARNING - :undeclared-var -----------------------------------------------
-;  Resource: <eval>:2:9
- Use of undeclared Var app.core/fetch-slug
---------------------------------------------------------------------------------
-
-; ------ WARNING - :undeclared-ns ------------------------------------------------
-;  Resource: <eval>:3:23
- No such namespace: p, could not locate p.cljs, p.cljc, or JavaScript source providing "p"
---------------------------------------------------------------------------------
-
-; ------ WARNING - :undeclared-var -----------------------------------------------
-;  Resource: <eval>:3:23
- Use of undeclared Var p/let
---------------------------------------------------------------------------------
-
-; ------ WARNING - :undeclared-var -----------------------------------------------
-;  Resource: <eval>:3:30
- Use of undeclared Var app.core/_response
---------------------------------------------------------------------------------
-
-; ------ WARNING - :undeclared-var -----------------------------------------------
-;  Resource: <eval>:4:30
- Use of undeclared Var app.core/response
---------------------------------------------------------------------------------
-
-; ------ WARNING - :undeclared-var -----------------------------------------------
-;  Resource: <eval>:4:46
- Use of undeclared Var app.core/_response
---------------------------------------------------------------------------------
-
-; ------ WARNING - :undeclared-var -----------------------------------------------
-;  Resource: <eval>:5:38
- Use of undeclared Var app.core/response
---------------------------------------------------------------------------------
-
-clj꞉app.core꞉> 
-#'shorturl.core/app
-clj꞉shorturl.core꞉> 
-nil
-clj꞉shorturl.core꞉> 
-#'shorturl.core/start
-clj꞉shorturl.core꞉> 
-#'shorturl.core/server
-clj꞉shorturl.core꞉> 
-nil
-; ------ WARNING - :undeclared-var -----------------------------------------------
-;  Resource: <eval>:1:3
- Use of undeclared Var app.core/state
---------------------------------------------------------------------------------
-
-; ------ WARNING - :undeclared-var -----------------------------------------------
-;  Resource: <eval>:1:9
- Use of undeclared Var app.core/set-state
---------------------------------------------------------------------------------
-
-; ------ WARNING - :undeclared-var -----------------------------------------------
-;  Resource: <eval>:2:9
- Use of undeclared Var app.core/fetch-slug
---------------------------------------------------------------------------------
-
-; ------ WARNING - :undeclared-ns ------------------------------------------------
-;  Resource: <eval>:3:23
- No such namespace: p, could not locate p.cljs, p.cljc, or JavaScript source providing "p"
---------------------------------------------------------------------------------
-
-; ------ WARNING - :undeclared-var -----------------------------------------------
-;  Resource: <eval>:3:23
- Use of undeclared Var p/let
---------------------------------------------------------------------------------
-
-; ------ WARNING - :undeclared-var -----------------------------------------------
-;  Resource: <eval>:3:30
- Use of undeclared Var app.core/_response
---------------------------------------------------------------------------------
-
-; ------ WARNING - :undeclared-var -----------------------------------------------
-;  Resource: <eval>:4:30
- Use of undeclared Var app.core/response
---------------------------------------------------------------------------------
-
-; ------ WARNING - :undeclared-var -----------------------------------------------
-;  Resource: <eval>:4:46
- Use of undeclared Var app.core/_response
---------------------------------------------------------------------------------
-
-; ------ WARNING - :undeclared-var -----------------------------------------------
-;  Resource: <eval>:5:38
- Use of undeclared Var app.core/response
---------------------------------------------------------------------------------
-
-clj꞉app.core꞉> 
-nil
-clj꞉app.core꞉> 
-nil
-; ------ WARNING - :undeclared-var -----------------------------------------------
-;  Resource: <eval>:1:3
- Use of undeclared Var app.core/state
---------------------------------------------------------------------------------
-
-; ------ WARNING - :undeclared-var -----------------------------------------------
-;  Resource: <eval>:1:9
- Use of undeclared Var app.core/set-state
---------------------------------------------------------------------------------
-
-; ------ WARNING - :undeclared-var -----------------------------------------------
-;  Resource: <eval>:2:9
- Use of undeclared Var app.core/fetch-slug
---------------------------------------------------------------------------------
-
-; ------ WARNING - :undeclared-ns ------------------------------------------------
-;  Resource: <eval>:3:23
- No such namespace: p, could not locate p.cljs, p.cljc, or JavaScript source providing "p"
---------------------------------------------------------------------------------
-
-; ------ WARNING - :undeclared-var -----------------------------------------------
-;  Resource: <eval>:3:23
- Use of undeclared Var p/let
---------------------------------------------------------------------------------
-
-; ------ WARNING - :undeclared-var -----------------------------------------------
-;  Resource: <eval>:3:30
- Use of undeclared Var app.core/_response
---------------------------------------------------------------------------------
-
-; ------ WARNING - :undeclared-var -----------------------------------------------
-;  Resource: <eval>:4:30
- Use of undeclared Var app.core/response
---------------------------------------------------------------------------------
-
-; ------ WARNING - :undeclared-var -----------------------------------------------
-;  Resource: <eval>:4:46
- Use of undeclared Var app.core/_response
---------------------------------------------------------------------------------
-
-; ------ WARNING - :undeclared-var -----------------------------------------------
-;  Resource: <eval>:5:38
- Use of undeclared Var app.core/response
---------------------------------------------------------------------------------
-
-clj꞉app.core꞉> 
-nil
-clj꞉app.core꞉> 
-nil
-; ------ WARNING - :undeclared-var -----------------------------------------------
-;  Resource: <eval>:1:3
- Use of undeclared Var app.core/state
---------------------------------------------------------------------------------
-
-; ------ WARNING - :undeclared-var -----------------------------------------------
-;  Resource: <eval>:1:9
- Use of undeclared Var app.core/set-state
---------------------------------------------------------------------------------
-
-; ------ WARNING - :undeclared-var -----------------------------------------------
-;  Resource: <eval>:2:9
- Use of undeclared Var app.core/fetch-slug
---------------------------------------------------------------------------------
-
-clj꞉app.core꞉> 
-#object[app$core$app_render]
-clj꞉app.core꞉> 
-#object[app$core$app_render]
-clj꞉app.core꞉> 
-#object[app$core$app_render]
-clj꞉app.core꞉> 
-nil
-clj꞉app.core꞉> 
-#object[app$core$app_render]
-clj꞉app.core꞉> 
-nil
-clj꞉app.core꞉> 
-#object[app$core$app_render]
-clj꞉app.core꞉> 
-; Evaluating file: core.cljs
-[]
-clj꞉app.core꞉> 
+; WARNING: for already refers to: #'clojure.core/for in namespace: shorturl.db, being replaced by: #'honey.sql.helpers/for
+; WARNING: group-by already refers to: #'clojure.core/group-by in namespace: shorturl.db, being replaced by: #'honey.sql.helpers/group-by
+; WARNING: update already refers to: #'clojure.core/update in namespace: shorturl.db, being replaced by: #'honey.sql.helpers/update
+; WARNING: set already refers to: #'clojure.core/set in namespace: shorturl.db, being replaced by: #'honey.sql.helpers/set
+clj꞉shorturl.db꞉> 
+#'shorturl.db/mysql-db
+clj꞉shorturl.db꞉> 
+#'shorturl.db/query-ps
+clj꞉shorturl.db꞉> 
+({:slug "abc", :url "https://roamresearch.com/#/app/Ttarabbia"}
+ {:slug "BGMHJLHEEH", :url "https://frontendmasters.com/courses/algorithms/introduction/"}
+ {:slug "BLXLRHPPXS", :url "https://metosin.fi"}
+ {:slug "BXOOQNKIHP", :url "https://www.w3schools.com/sql/sql_delete.asp"}
+ {:slug "CBCEPENJKR", :url "https://app.planetscale.com/ttarabbia/shorturl/main/console"}
+ {:slug "DMBUJTGDYH", :url "https://frontendmasters.com/courses/algorithms/introduction/"}
+ {:slug "DMVTROAOBZ", :url "https://github.com/danownsthisspace/shorturl-app/blob/main/src/cljs/app/core.cljs"}
+ {:slug "EJSYAWHNOQ", :url ""}
+ {:slug "FKNFAYOMYC", :url "https://cljdoc.org/d/funcool/promesa/8.0.450/doc/user-guide"}
+ {:slug "GJGQASTGIM", :url "https://cljdoc.org/d/funcool/promesa/8.0.450/doc/user-guide"}
+ {:slug "HQLPKDSQLC", :url ""}
+ {:slug "HWEPGQSUNM", :url "https://github.com/danownsthisspace"}
+ {:slug "IENKVAXUVG", :url "https://github.com/danownsthisspace"}
+ {:slug "LGJBHSFEGZ", :url ""}
+ {:slug "MKICUBEFTC", :url "https://frontendmasters.com/courses/algorithms/introduction/"}
+ {:slug "MWYMHMKCSY", :url "https://github.com/searncorfield/honeysql"}
+ {:slug "NQWTUHZZKW", :url "https://www.youtube.com/watch?v=V-dBmuRsW6w&t=611s"}
+ {:slug "OHEQUOZFDT", :url ""}
+ {:slug "QLTWDEGGUF", :url "https://www.w3schools.com/sql/sql_delete.asp"}
+ {:slug "rfs", :url "http://google.com"}
+ {:slug "TZMSYQUQKH", :url "https://app.planetscale.com/ttarabbia/shorturl/main/console"}
+ {:slug "UDVNYOCVBD", :url "https://cljdoc.org/d/funcool/promesa/8.0.450/doc/user-guide"}
+ {:slug "VMNHKNFGQW", :url ""}
+ {:slug "WWBZOBDBDS", :url "https://cljdoc.org/d/funcool/promesa/8.0.450/doc/user-guide"}
+ {:slug "XFKXZPIUDX", :url "https://github.com/danownsthisspace/shorturl-app/blob/main/src/cljs/app/core.cljs"}
+ {:slug "YLIMJBBOCW", :url "https://github.com/ttarabbia"}
+ {:slug "YWLWVVCHFZ", :url "https://www.youtube.com/watch?v=e7BTRR0VBsQ"}
+ {:slug "ZDWFXYYWMW", :url ""})
+clj꞉shorturl.db꞉> 
+({:slug "abc", :url "https://roamresearch.com/#/app/Ttarabbia"}
+ {:slug "BGMHJLHEEH", :url "https://frontendmasters.com/courses/algorithms/introduction/"}
+ {:slug "BLXLRHPPXS", :url "https://metosin.fi"}
+ {:slug "BXOOQNKIHP", :url "https://www.w3schools.com/sql/sql_delete.asp"}
+ {:slug "CBCEPENJKR", :url "https://app.planetscale.com/ttarabbia/shorturl/main/console"}
+ {:slug "DMBUJTGDYH", :url "https://frontendmasters.com/courses/algorithms/introduction/"}
+ {:slug "DMVTROAOBZ", :url "https://github.com/danownsthisspace/shorturl-app/blob/main/src/cljs/app/core.cljs"}
+ {:slug "EJSYAWHNOQ", :url ""}
+ {:slug "FKNFAYOMYC", :url "https://cljdoc.org/d/funcool/promesa/8.0.450/doc/user-guide"}
+ {:slug "GJGQASTGIM", :url "https://cljdoc.org/d/funcool/promesa/8.0.450/doc/user-guide"}
+ {:slug "HQLPKDSQLC", :url ""}
+ {:slug "HWEPGQSUNM", :url "https://github.com/danownsthisspace"}
+ {:slug "IENKVAXUVG", :url "https://github.com/danownsthisspace"}
+ {:slug "LGJBHSFEGZ", :url ""}
+ {:slug "MKICUBEFTC", :url "https://frontendmasters.com/courses/algorithms/introduction/"}
+ {:slug "MWYMHMKCSY", :url "https://github.com/searncorfield/honeysql"}
+ {:slug "NQWTUHZZKW", :url "https://www.youtube.com/watch?v=V-dBmuRsW6w&t=611s"}
+ {:slug "OHEQUOZFDT", :url ""}
+ {:slug "QLTWDEGGUF", :url "https://www.w3schools.com/sql/sql_delete.asp"}
+ {:slug "rfs", :url "http://google.com"}
+ {:slug "TZMSYQUQKH", :url "https://app.planetscale.com/ttarabbia/shorturl/main/console"}
+ {:slug "UDVNYOCVBD", :url "https://cljdoc.org/d/funcool/promesa/8.0.450/doc/user-guide"}
+ {:slug "VMNHKNFGQW", :url ""}
+ {:slug "WWBZOBDBDS", :url "https://cljdoc.org/d/funcool/promesa/8.0.450/doc/user-guide"}
+ {:slug "XFKXZPIUDX", :url "https://github.com/danownsthisspace/shorturl-app/blob/main/src/cljs/app/core.cljs"}
+ {:slug "YLIMJBBOCW", :url "https://github.com/ttarabbia"}
+ {:slug "YWLWVVCHFZ", :url "https://www.youtube.com/watch?v=e7BTRR0VBsQ"}
+ {:slug "ZDWFXYYWMW", :url ""})
+clj꞉shorturl.db꞉> 
+#'shorturl.db/query
+clj꞉shorturl.db꞉> 
+#'shorturl.db/db
+clj꞉shorturl.db꞉> 
+; Execution error (SQLException) at java.sql.DriverManager/getConnection (DriverManager.java:702).
+; No suitable driver found for jdbc:sqlite:db/database.db
+clj꞉shorturl.db꞉> 
 ; nREPL Connection was closed
 ; Jacking in...
 ; Starting Jack-in Terminal: npx shadow-cljs -d cider/cider-nrepl:0.28.5 watch :app
@@ -477,12 +197,56 @@ clj꞉shadow.user꞉> 
    See the Output channel "Calva Connection Log" for any hints on what went wrong.
 ; Jack-in done.
 clj꞉shadow.user꞉> 
-; Evaluating file: core.clj
+; Evaluating file: db.clj
 ; WARNING: for already refers to: #'clojure.core/for in namespace: shorturl.db, being replaced by: #'honey.sql.helpers/for
 ; WARNING: group-by already refers to: #'clojure.core/group-by in namespace: shorturl.db, being replaced by: #'honey.sql.helpers/group-by
 ; WARNING: update already refers to: #'clojure.core/update in namespace: shorturl.db, being replaced by: #'honey.sql.helpers/update
 ; WARNING: set already refers to: #'clojure.core/set in namespace: shorturl.db, being replaced by: #'honey.sql.helpers/set
-nil
+({:slug "ABCHD", :url "https://wordsandstuff.com"} {:slug "YIBEPAUNTV", :url "https://www.prisma.io/dataguide/intro/comparing-database-types"} {:slug "CBLFKBBYUI", :url "https://tableplus.com/blog/2018/04/sqlite-check-whether-a-table-exists.html"} {:slug "XLIDDHECQU", :url "https://metosin.fi"})
+clj꞉shorturl.db꞉> 
+({:slug "ABCHD", :url "https://wordsandstuff.com"}
+ {:slug "YIBEPAUNTV", :url "https://www.prisma.io/dataguide/intro/comparing-database-types"}
+ {:slug "CBLFKBBYUI", :url "https://tableplus.com/blog/2018/04/sqlite-check-whether-a-table-exists.html"}
+ {:slug "XLIDDHECQU", :url "https://metosin.fi"})
+clj꞉shorturl.db꞉> 
+({:slug "abc", :url "https://roamresearch.com/#/app/Ttarabbia"}
+ {:slug "BGMHJLHEEH", :url "https://frontendmasters.com/courses/algorithms/introduction/"}
+ {:slug "BLXLRHPPXS", :url "https://metosin.fi"}
+ {:slug "BXOOQNKIHP", :url "https://www.w3schools.com/sql/sql_delete.asp"}
+ {:slug "CBCEPENJKR", :url "https://app.planetscale.com/ttarabbia/shorturl/main/console"}
+ {:slug "DMBUJTGDYH", :url "https://frontendmasters.com/courses/algorithms/introduction/"}
+ {:slug "DMVTROAOBZ", :url "https://github.com/danownsthisspace/shorturl-app/blob/main/src/cljs/app/core.cljs"}
+ {:slug "EJSYAWHNOQ", :url ""}
+ {:slug "FKNFAYOMYC", :url "https://cljdoc.org/d/funcool/promesa/8.0.450/doc/user-guide"}
+ {:slug "GJGQASTGIM", :url "https://cljdoc.org/d/funcool/promesa/8.0.450/doc/user-guide"}
+ {:slug "HQLPKDSQLC", :url ""}
+ {:slug "HWEPGQSUNM", :url "https://github.com/danownsthisspace"}
+ {:slug "IENKVAXUVG", :url "https://github.com/danownsthisspace"}
+ {:slug "LGJBHSFEGZ", :url ""}
+ {:slug "MKICUBEFTC", :url "https://frontendmasters.com/courses/algorithms/introduction/"}
+ {:slug "MWYMHMKCSY", :url "https://github.com/searncorfield/honeysql"}
+ {:slug "NQWTUHZZKW", :url "https://www.youtube.com/watch?v=V-dBmuRsW6w&t=611s"}
+ {:slug "OHEQUOZFDT", :url ""}
+ {:slug "QLTWDEGGUF", :url "https://www.w3schools.com/sql/sql_delete.asp"}
+ {:slug "rfs", :url "http://google.com"}
+ {:slug "TZMSYQUQKH", :url "https://app.planetscale.com/ttarabbia/shorturl/main/console"}
+ {:slug "UDVNYOCVBD", :url "https://cljdoc.org/d/funcool/promesa/8.0.450/doc/user-guide"}
+ {:slug "VMNHKNFGQW", :url ""}
+ {:slug "WWBZOBDBDS", :url "https://cljdoc.org/d/funcool/promesa/8.0.450/doc/user-guide"}
+ {:slug "XFKXZPIUDX", :url "https://github.com/danownsthisspace/shorturl-app/blob/main/src/cljs/app/core.cljs"}
+ {:slug "YLIMJBBOCW", :url "https://github.com/ttarabbia"}
+ {:slug "YWLWVVCHFZ", :url "https://www.youtube.com/watch?v=e7BTRR0VBsQ"}
+ {:slug "ZDWFXYYWMW", :url ""})
+clj꞉shorturl.db꞉> 
+; Syntax error compiling at (src/clj/shorturl/core.clj:49:1).
+; Unable to resolve symbol: comment in this context
+clj꞉shorturl.core꞉> 
+
+
+
+(doc if)
+; Syntax error compiling at (.calva/output-window/output.calva-repl:247:1).
+; Unable to resolve symbol: doc in this context
 clj꞉shorturl.core꞉> 
 ; nREPL Connection was closed
 ; Jacking in...
@@ -506,105 +270,29 @@ clj꞉shadow.user꞉> 
 ;    (There is a button in the status bar for this)
 ; Jack-in done.
 cljs꞉cljs.user꞉> 
-; Evaluating file: core.clj
-; WARNING: for already refers to: #'clojure.core/for in namespace: shorturl.db, being replaced by: #'honey.sql.helpers/for
-; WARNING: group-by already refers to: #'clojure.core/group-by in namespace: shorturl.db, being replaced by: #'honey.sql.helpers/group-by
-; WARNING: update already refers to: #'clojure.core/update in namespace: shorturl.db, being replaced by: #'honey.sql.helpers/update
-; WARNING: set already refers to: #'clojure.core/set in namespace: shorturl.db, being replaced by: #'honey.sql.helpers/set
 nil
-clj꞉shorturl.core꞉> 
-#'shorturl.core/server
-clj꞉shorturl.core꞉> 
-#object[app$core$app_render]
-cljs꞉app.core꞉> 
-#object[app$core$app_render]
-cljs꞉app.core꞉> 
-#object[app$core$app_render]
-cljs꞉app.core꞉> 
-nil
-clj꞉shorturl.core꞉> 
-#'shorturl.core/server
-clj꞉shorturl.core꞉> 
-nil
-cljs꞉app.core꞉> 
-#object[app$core$app_render]
-cljs꞉app.core꞉> 
-#object[app$core$app_render]
-cljs꞉app.core꞉> 
-; Evaluating file: core.cljs
-[]
-cljs꞉app.core꞉> 
-nil
-cljs꞉app.core꞉> 
-nil
-; ------ WARNING - :undeclared-var -----------------------------------------------
-;  Resource: <eval>:4:118
- Use of undeclared Var app.core/state
---------------------------------------------------------------------------------
-
-cljs꞉app.core꞉> 
-#object[app$core$app_render]
-cljs꞉app.core꞉> 
-nil
-; ------ WARNING - :undeclared-var -----------------------------------------------
-;  Resource: <eval>:4:118
- Use of undeclared Var app.core/state
---------------------------------------------------------------------------------
-
-cljs꞉app.core꞉> 
-nil
-; ------ WARNING - :undeclared-var -----------------------------------------------
-;  Resource: <eval>:4:118
- Use of undeclared Var app.core/state
---------------------------------------------------------------------------------
-
-cljs꞉app.core꞉> 
-#'app.core/fetch-slug
-cljs꞉app.core꞉> 
-#object[app$core$app_render]
-cljs꞉app.core꞉> 
-#object[app$core$app_render]
-cljs꞉app.core꞉> 
-#object[app$core$app_render]
-cljs꞉app.core꞉> 
-#object[app$core$app_render]
-cljs꞉app.core꞉> 
-nil
-clj꞉shorturl.core꞉> 
-#'shorturl.core/server
-clj꞉shorturl.core꞉> 
-; Evaluating file: core.cljs
-[]
-cljs꞉app.core꞉> 
-; Evaluating file: core.clj
-; Execution error (BindException) at sun.nio.ch.Net/bind0 (Net.java:-2).
-; Address already in use
-; Evaluation of file core.clj failed: class clojure.lang.Compiler$CompilerException
-clj꞉shorturl.core꞉> 
-; nREPL Connection was closed
-; Jacking in...
-; Starting Jack-in Terminal: npx shadow-cljs -d cider/cider-nrepl:0.28.5 watch :app
-; Hooking up nREPL sessions...
-; Connected session: clj
-; TIPS:
-;   - You can edit the contents here. Use it as a REPL if you like.
-;   - `alt+enter` evaluates the current top level form.
-;   - `ctrl+enter` evaluates the current form.
-;   - `alt+up` and `alt+down` traverse up and down the REPL command history
-;      when the cursor is after the last contents at the prompt
-;   - Clojure lines in stack traces are peekable and clickable.
-clj꞉shadow.user꞉> 
-; Creating cljs repl session...
-; Connecting cljs repl: shadow-cljs...
-;   The Calva Connection Log might have more connection progress information.
-; Connected session: cljs, repl: :app
-; TIPS: You can choose which REPL to use (clj or cljs):
-;    *Calva: Toggle REPL connection*
-;    (There is a button in the status bar for this)
-; Jack-in done.
+; No available JS runtime.
+; See https://shadow-cljs.github.io/docs/UsersGuide.html#repl-troubleshooting
 cljs꞉cljs.user꞉> 
-; Syntax error compiling at (src/clj/shorturl/core.clj:61:13).
-; Unable to resolve symbol: start in this context
+nil
+; No available JS runtime.
+; See https://shadow-cljs.github.io/docs/UsersGuide.html#repl-troubleshooting
+cljs꞉cljs.user꞉> 
+#object[app$core$app_render]
+cljs꞉app.core꞉> 
+"{\"url\":\"https://github.com\"}"
+cljs꞉app.core꞉> 
+nil
+clj꞉shorturl.slug꞉> 
+; Syntax error compiling at (src/clj/shorturl/slug.clj:6:21).
+; Unable to resolve symbol: charset in this context
+clj꞉shorturl.slug꞉> 
+#'shorturl.slug/charset
+clj꞉shorturl.slug꞉> 
+#'shorturl.slug/generate-slug
+clj꞉shorturl.slug꞉> 
+; Syntax error compiling at (src/clj/shorturl/core.clj:27:14).
+; Unable to resolve symbol: generate-slug in this context
 clj꞉shorturl.core꞉> 
 ; Evaluating file: core.clj
 ; WARNING: for already refers to: #'clojure.core/for in namespace: shorturl.db, being replaced by: #'honey.sql.helpers/for
@@ -612,62 +300,17 @@ clj꞉shorturl.core꞉> 
 ; WARNING: update already refers to: #'clojure.core/update in namespace: shorturl.db, being replaced by: #'honey.sql.helpers/update
 ; WARNING: set already refers to: #'clojure.core/set in namespace: shorturl.db, being replaced by: #'honey.sql.helpers/set
 nil
-clj꞉shorturl.core꞉> 
-#'shorturl.core/server
 clj꞉shorturl.core꞉> 
 #'shorturl.core/create-redirect
 clj꞉shorturl.core꞉> 
 #'shorturl.core/app
 clj꞉shorturl.core꞉> 
-nil
-clj꞉shorturl.core꞉> 
-#'shorturl.core/server
-clj꞉shorturl.core꞉> 
-nil
-; ------ WARNING - :undeclared-var -----------------------------------------------
-;  Resource: <eval>:10:36
- Use of undeclared Var app.core/data
---------------------------------------------------------------------------------
-
-; ------ WARNING - :undeclared-var -----------------------------------------------
-;  Resource: <eval>:10:45
- Use of undeclared Var app.core/response
---------------------------------------------------------------------------------
-
-cljs꞉app.core꞉> 
-nil
-; ------ WARNING - :undeclared-var -----------------------------------------------
-;  Resource: <eval>:10:43
- Use of undeclared Var app.core/data
---------------------------------------------------------------------------------
-
-; ------ WARNING - :undeclared-var -----------------------------------------------
-;  Resource: <eval>:10:52
- Use of undeclared Var app.core/response
---------------------------------------------------------------------------------
-
-cljs꞉app.core꞉> 
-#object[app$core$app_render]
-cljs꞉app.core꞉> 
-#object[app$core$app_render]
-cljs꞉app.core꞉> 
-; Evaluating file: core.cljs
-[]
-cljs꞉app.core꞉> 
-#object[app$core$app_render]
-cljs꞉app.core꞉> 
-#object[app$core$app_render]
-cljs꞉app.core꞉> 
-#object[app$core$app_render]
-cljs꞉app.core꞉> 
-#object[app$core$app_render]
-cljs꞉app.core꞉> 
-#object[app$core$app_render]
-cljs꞉app.core꞉> 
-#object[app$core$app_render]
-cljs꞉app.core꞉> 
-#object[app$core$app_render]
-cljs꞉app.core꞉> 
-#object[app$core$app_render]
-cljs꞉app.core꞉> 
-; nREPL Connection was closed
+#'shorturl.db/insert!
+clj꞉shorturl.db꞉> 
+; Evaluating file: db.clj
+; WARNING: for already refers to: #'clojure.core/for in namespace: shorturl.db, being replaced by: #'honey.sql.helpers/for
+; WARNING: group-by already refers to: #'clojure.core/group-by in namespace: shorturl.db, being replaced by: #'honey.sql.helpers/group-by
+; WARNING: update already refers to: #'clojure.core/update in namespace: shorturl.db, being replaced by: #'honey.sql.helpers/update
+; WARNING: set already refers to: #'clojure.core/set in namespace: shorturl.db, being replaced by: #'honey.sql.helpers/set
+({:slug "ABCHD", :url "https://wordsandstuff.com"} {:slug "YIBEPAUNTV", :url "https://www.prisma.io/dataguide/intro/comparing-database-types"} {:slug "CBLFKBBYUI", :url "https://tableplus.com/blog/2018/04/sqlite-check-whether-a-table-exists.html"} {:slug "XLIDDHECQU", :url "https://metosin.fi"})
+clj꞉shorturl.db꞉> 

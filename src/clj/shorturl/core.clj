@@ -42,7 +42,7 @@
         ["api/"
          ["redirect/" {:post create-redirect}]]
         ["assets/*" (ring/create-resource-handler {:root "public/assets"})]
-        ["" {:handler (fn [req] {:body (index) :status 200})}]]
+        ["" {:handler (fn [] {:body (index) :status 200})}]]
        {:data {:muuntaja m/instance
                :middleware [muuntaja/format-middleware]}})))
 

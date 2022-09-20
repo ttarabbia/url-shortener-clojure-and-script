@@ -16,15 +16,19 @@
 ;DATABASE=shorturl
 
 
-;; (def db
-;;   {:classname   "org.sqlite.JDBC"
-;;    :subprotocol "sqlite"
-;;    :subname     "db/database.db"})
+(def db
+  {:classname   "org.sqlite.JDBC"
+   :subprotocol "sqlite"
+   :subname     "db/database.db"})
+
+;; DROP TABLE IF EXISTS table_name;
+;; CREATE TABLE IF NOT EXISTS table_name (table_definition);
+;; SELECT name FROM sqlite_master WHERE type='table' AND name='redirects';
 
 ;; create table
-;; (j/db-do-commands db "CREATE TABLE redirects
-;;                     (slug varchar(12) PRIMARY KEY NOT NULL,
-;;                      url varchar(1000) NOT NULL)")
+(j/db-do-commands db "CREATE TABLE IF NOT EXISTS redirects
+                    (slug varchar(12) PRIMARY KEY NOT NULL,
+                     url varchar(1000) NOT NULL)")
 
 
 
@@ -36,10 +40,14 @@
    :password (env :PASSWORD)})
 
 (defn query [q]
+  (j/query db q))
+
+
+(defn query-ps [q]
   (j/query mysql-db q))
 
 (defn insert! [q]
-  (j/db-do-prepared mysql-db q))
+  (j/db-do-prepared db q))
 
 
 (defn insert-redirect! [slug url]
@@ -59,11 +67,12 @@
 
 
 
-
 (comment
   (query (-> (select :*)
              (from :redirects)
-             (where := :slug "EAYRQJOCPN")
+             (sql/format)))
+  (query-ps (-> (select :*)
+             (from :redirects)
              (sql/format)))
   (insert! (-> (insert-into :redirects)
                (columns :slug :url)
@@ -73,13 +82,13 @@
   (insert-redirect! "rfs" "http://google.com")
   (get-url "abc"))
 
-(j/query mysql-db
+(j/query db
          (-> (select :*)
              (from :redirects)
              (sql/format)))
 
 
-(-> (select :a :b :c)
-    (from :foo)
-    (where [:= :foo.a "baz"])
-    (sql/format))
+;; (-> (select :a :b :c)
+;;     (from :foo)
+;;     (where [:= :foo.a "baz"])
+;;     (sql/format))

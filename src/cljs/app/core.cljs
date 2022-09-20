@@ -31,7 +31,7 @@
                   :class-name "form-control border border-solid border-gray-600"
                   :placeholder "Enter URL"})
         (d/button {:on-click #(fetch-slug)
-                   :class-name "border-2 rounded px-4 uppercase "} "shorten Url")))
+                   :class-name "border-2 rounded px-4 font-extrabold uppercase bg-blue-50"} "shorten Url")))
      )))
 
 
